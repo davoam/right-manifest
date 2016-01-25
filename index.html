@@ -2,17 +2,53 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
 		<title>Регионы России</title>
 		<style>
 			body {
-				padding: 0;
+				padding: 15px;
 				margin: 0;
 				font-family: 'Helvetica', 'Arial', 'sans-serif';
 				text-align: center;
+				background: #ecf0f1;
 			}
 			.content {
+			    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+			    border-radius: 2px;
+			    padding: 5px;
+			    margin: 20px 0;
+			    background: #FFF;
 				max-width: 480px;
 				margin: 0 auto;
+
+			}
+			input {
+				border: solid 3px rgba(52, 152, 219, 0.3);
+				transition: 0.3s ease all;
+				outline: none;
+				padding: 5px;
+				border-radius: 5px;
+				margin-bottom: 10px;
+			}
+			input:focus {
+				border-color: rgba(52, 152, 219, 1);
+			}
+			button {
+				outline: none;
+				border: none;
+				border-radius: 3px;
+				padding: 5px 10px;
+				color: #FFF;
+				background: #2ecc71;
+				box-shadow: 0 3px 0 #27ae60;
+				font-size: 1.3rem;
+			}
+			button:active {
+				box-shadow: none;
+				transform: translate(0, 3px);
+			}
+			button:hover {
+				cursor: pointer;
 			}
 		</style>
 	</head>
@@ -21,6 +57,7 @@
 			<h2>Введите код региона:</h2>
 				<form action="#">
 					<input type="number">
+					<br>
 					<button class="searchButton">найти</button>
 				</form>
 			<h1 class="regionName"></h1>

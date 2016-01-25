@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Регионы России</title>
+		<style>
+			body {
+				padding: 0;
+				margin: 0;
+				font-family: 'Helvetica', 'Arial', 'sans-serif';
+				text-align: center;
+			}
+			.content {
+				max-width: 480px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<h2>Введите код региона:</h2>
+				<form action="#">
+					<input type="number">
+					<button class="searchButton">найти</button>
+				</form>
+			<h1 class="regionName"></h1>
+		</div>
+		<script src="codes.js"></script>
+		<script>
+			var searchButton = document.getElementsByClassName('searchButton')[0];
+			var regionNameDiv = document.getElementsByClassName('regionName')[0];
+			var input = document.getElementsByTagName('input')[0];
+			console.log(searchButton);
+			searchButton.addEventListener('click', onButtonClick);
+
+			function onButtonClick() {
+				var name = codes[input.value];
+				if (name) {
+					regionNameDiv.innerHTML = name;
+				}
+				else {
+					regionNameDiv.innerHTML = 'регион не найден';
+				}
+			}
+		</script>
+	</body>
+</html>

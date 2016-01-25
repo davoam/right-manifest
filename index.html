@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
+		<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+		<link rel="manifest" href="manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
 		<title>Регионы России</title>
 		<style>
+		    * {
+		    	box-sizing: border-box;
+		    }
+			body, html {
+				width: 100%;
+				height: 100%;
+			}
 			body {
-				padding: 15px;
+				padding: 0;
 				margin: 0;
 				font-family: 'Helvetica', 'Arial', 'sans-serif';
 				text-align: center;
 				background: #95a5a6;
 			}
+			.content-wrapper {
+				height: 100%;
+				display: table;
+				margin: 0 auto;
+				padding: 15px;
+				width: 100%;
+				max-width: 480px;
+			}
+			.content-wrapper > div {
+				display: table-cell;
+				vertical-align: middle;
+			}
 			.content {
 			    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
 			    border-radius: 2px;
-			    padding: 5px;
+			    padding: 15px;
 			    margin: 20px 0;
 			    background: #FFF;
-				max-width: 480px;
-				margin: 0 auto;
-
 			}
 			input {
 				border: solid 3px rgba(52, 152, 219, 0.3);
@@ -53,14 +88,18 @@
 		</style>
 	</head>
 	<body>
-		<div class="content">
-			<h2>Введите код региона:</h2>
-				<form action="#">
-					<input type="number">
-					<br>
-					<button class="searchButton">найти</button>
-				</form>
-			<h1 class="regionName"></h1>
+		<div class="content-wrapper">
+			<div>
+				<div class="content">
+					<h2>Введите код региона:</h2>
+						<form action="#">
+							<input type="number">
+							<br>
+							<button class="searchButton">найти</button>
+						</form>
+					<h1 class="regionName"></h1>
+				</div>
+			</div>
 		</div>
 		<script src="codes.js"></script>
 		<script>

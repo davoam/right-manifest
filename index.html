@@ -93,7 +93,7 @@
 			<div>
 				<div class="content">
 					<h2>Введите код региона:</h2>
-						<input type="number">
+						<input type="text" oninput="this.value = this.value.replace(/\D/g, '');">
 						<br>
 						<button class="searchButton">найти</button>
 					<h1 class="regionName"></h1>
